@@ -1,0 +1,52 @@
+/* 🌟 reset بسيط */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", Arial, sans-serif;
+}
+
+  /* خلفية الصفحة */
+body {
+    background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+  /* الحاوية العامة */
+.test-con {
+    background-color: #ffffff;
+    padding: 30px 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+  /* تأثير عند المرور */
+.test-con:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+}
+
+  /* تنسيق النص */
+#test {
+    font-size: 20px;
+    line-height: 1.8;
+    color: #000000;
+    white-space: pre-line; /* يحافظ على السطور الجديدة */
+}
+
+  /* العناوين داخل التقرير */
+#test strong {
+    color: #1565c0;
+}
+
+  /* رموز الحالة */
+#test span.status {
+    font-weight: bold;
+    color: #2e7d32;
+}
