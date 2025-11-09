@@ -18,8 +18,8 @@ const employees = [
     let activeHighPer = topActive.filter((emp) => emp.performance >= 4.5);
 
 // 3) حساب متوسط الرواتب لهؤلاء باستخدام reduce
-    let totalSalary  = employees.reduce((acc , emp) => acc + emp.salary , 0);
-    let avgSalary = totalSalary / employees.length;
+    let totalSalary  = activeHighPer.reduce((acc , emp) => acc + emp.salary , 0);
+    let avgSalary = totalSalary / activeHighPer.length;
 
     
 // 4) استخدام map لعرض أسماء الموظفين + القسم + مرتبهم الجديد بعد زيادة 10%
@@ -28,7 +28,7 @@ let withRaise  = activeHighPer.map((emp) => {
     return {
         name: emp.name,
         department: emp.department,
-        salary: newSalary.toFixed(0)
+        salary: newSalary.toFixed()
     }
 });
 
@@ -52,7 +52,7 @@ function displayResults(title , data) {
     else if (data === withRaise) {
         console.log(` ${title}`);
         data.forEach((emp) => {
-            console.log(`- ${emp.name} | القسم: ${emp.department} | $مرتب بعد الزيادة: ${emp.salary}`);
+            console.log(`- ${emp.name} | القسم: ${emp.department} | مرتب بعد الزيادة: ${emp.salary}`);
         });
     }
     else if (data === topPerformer) {
@@ -62,6 +62,7 @@ function displayResults(title , data) {
     else {
         console.log("");
     }
+ 
 }
 displayResults("📌 الموظفون النشطون ذوو الأداء العالي:", activeHighPer);
 displayResults("💰 متوسط رواتب هؤلاء الموظفين:", avgSalary);
