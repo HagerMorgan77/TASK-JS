@@ -1,4 +1,3 @@
-
 //Task 6: تقرير الطالب بناءً على درجاته
 //  شروط التقييم
 function generateReport (studentName , score , subject) {

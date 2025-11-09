@@ -57,6 +57,7 @@ function updateClock (){
     }
     
 
+
 // تحديث الساعة كل ثانية
 document.addEventListener('DOMContentLoaded', function(){
     updateClock(); // Immediate execution
