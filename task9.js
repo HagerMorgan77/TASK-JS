@@ -18,8 +18,8 @@ const employees = [
     let activeHighPer = topActive.filter((emp) => emp.performance >= 4.5);
 
 // 3) حساب متوسط الرواتب لهؤلاء باستخدام reduce
-    let totalSalary  = activeHighPer.reduce((acc , emp) => acc + emp.salary , 0);
-    let avgSalary = totalSalary / activeHighPer.length;
+    let totalSalary  = employees.reduce((acc , emp) => acc + emp.salary , 0);
+    let avgSalary = totalSalary / employees.length;
 
     
 // 4) استخدام map لعرض أسماء الموظفين + القسم + مرتبهم الجديد بعد زيادة 10%
